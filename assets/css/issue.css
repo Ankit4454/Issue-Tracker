@@ -1,0 +1,108 @@
+#issueForm{
+    width: 100%;
+}
+
+#issueForm input:not([type='checkbox']),#issueForm textarea{
+    margin-bottom: 1rem;
+    padding: 8px 4px;
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid lightgray;
+}
+
+#issueForm input:focus,#issueForm textarea:focus{
+    border: 2px solid royalblue;
+}
+
+#createIssueBtn{
+    margin: 1rem 0;
+}
+
+#issueList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.issueItem{
+    background-color: white;
+    width: 250px;
+    height: fit-content;
+    margin: 0 1rem 1rem 0;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid royalblue;
+}
+
+.fixBtnDiv{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.fixBtn{
+    width: fit-content;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: royalblue;
+    border-radius: 8px;
+    border: 2px solid royalblue;
+    color: white;
+}
+
+.fixBtn:hover{
+    background-color: white;
+    color: royalblue;
+}
+
+.labelDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.projectIssueLabelDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.labelItem{
+    width: fit-content;
+    padding: 8px;
+    background-color: royalblue;
+    border-radius: 8px;
+    color: white;
+    margin: 4px 0;
+}
+
+.projectIssueLabelItem{
+    width: fit-content;
+    padding: 8px;
+    background-color: royalblue;
+    border-radius: 8px;
+    color: white;
+    margin: 4px;
+}
+
+#issueListDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.projectDtlIssue{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid royalblue;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+}

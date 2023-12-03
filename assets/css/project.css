@@ -1,0 +1,100 @@
+#projectDtlsDiv{
+    width: 100%;
+    display: flex;
+}
+
+#projectLeftDiv::-webkit-scrollbar{
+    display: none;
+}
+
+#projectLeftDiv{
+    padding: 0 1rem 0 0;
+    width: 50%;
+    height: 100vh;
+    border-right: 1px solid royalblue;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#projectRightDiv::-webkit-scrollbar{
+    display: none;
+}
+
+#projectRightDiv{
+    padding: 0 0 0 1rem;
+    width: 50%;
+    height: 100vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#projectForm input,#projectForm textarea{
+    margin-bottom: 1rem;
+    padding: 8px 4px;
+    width: 50%;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid lightgray;
+}
+
+#projectForm input:focus,#projectForm textarea:focus{
+    border: 2px solid royalblue;
+}
+
+#projectFilterForm input:not([type='checkbox']){
+    margin-bottom: 1rem;
+    padding: 8px 4px;
+    width: 100%;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid lightgray;
+}
+
+#projectFilterForm select{
+    margin-bottom: 1rem;
+    padding: 8px 4px;
+    width: 50%;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid lightgray;
+}
+
+#projectFilterForm input:focus{
+    border: 2px solid royalblue;
+}
+
+#projectSearchForm input{
+    margin-bottom: 1rem;
+    padding: 8px 4px;
+    width: 50%;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid lightgray;
+}
+
+#projectSearchForm input:focus{
+    border: 2px solid royalblue;
+}
+
+#filterSearchTab{
+    display: flex;
+    align-items: center;
+}
+
+.projectIssueTitleDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid royalblue;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 0 1rem 0 0;
+    cursor: pointer;
+}
+
+.projectIssueTitleDiv.active{
+    background-color: royalblue;
+    color: white;
+}

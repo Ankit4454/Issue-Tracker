@@ -1,0 +1,75 @@
+<div id="projectDtlsDiv">
+    <div id="projectLeftDiv">
+        <div id="projectDtls">
+            <h2><%=project.projectName%></h2>
+            <p><%=project.description%></p>
+            <p>-<%=project.author%></p>
+        </div>
+        <br>
+        <h3>Create Issue</h3>
+        <form id="issueForm" action="/createIssue" autocomplete="off" method="post">
+            <input type="hidden" name="project" id="project" />
+            <label for="projectName">Title</label>
+            <br>
+            <input type="text" name="title" id="title" placeholder="Title" required />
+            <br>
+            <label for="description">Description</label>
+            <br>
+            <textarea rows="4" type="text" name="description" id="description" placeholder="Description" required></textarea>
+            <br>
+            <label for="author">Author</label>
+            <br>
+            <input type="text" name="author" id="author" placeholder="Author" required />
+            <br>
+            <label>Labels</label>
+            <br>
+            <input type="checkbox" name="labels" id="bug" value="Bug" />
+            <label for="bug">Bug</label>
+            <input type="checkbox" name="labels" id="ui" value="UI Improvement" />
+            <label for="ui">UI Improvement</label>
+            <input type="checkbox" name="labels" id="doc" value="Documentation" />
+            <label for="doc">Documentation</label>
+            <input type="checkbox" name="labels" id="enhancement" value="Enhancement" />
+            <label for="enhancement">Enhancement</label>
+            <input type="checkbox" name="labels" id="duplicate" value="Duplicate" />
+            <label for="duplicate">Duplicate</label>
+            <br>
+            <button type="submit" id="createIssueBtn" class="submitBtn">Submit</button>
+        </form>
+    </div>
+    <div id="projectRightDiv">
+        <div id="filterDiv">
+            <h3>Filter by</h3>
+            <form id="projectFilterForm" action="/filterIssues" autocomplete="off" method="get">
+                <label>Labels</label>
+                <br>
+                <input type="checkbox" name="issueLabels" id="issueBug" value="Bug" />
+                <label for="issueBug">Bug</label>
+                <input type="checkbox" name="issueLabels" id="issueUi" value="UI Improvement" />
+                <label for="issueUi">UI Improvement</label>
+                <input type="checkbox" name="issueLabels" id="issueDoc" value="Documentation" />
+                <label for="issueDoc">Documentation</label>
+                <input type="checkbox" name="issueLabels" id="issueEnhancement" value="Enhancement" />
+                <label for="issueEnhancement">Enhancement</label>
+                <input type="checkbox" name="issueLabels" id="issueDuplicate" value="Duplicate" />
+                <label for="issueDuplicate">Duplicate</label> 
+                <label for="author">Author</label>
+                <br>
+                <input type="text" name="issueAuthor" id="issueAuthor" placeholder="Author" />
+                <br>
+                <label for="issueTitle">Title</label>
+                <br>
+                <input type="text" name="issueTitle" id="issueTitle" placeholder="Title" />
+                <br>
+                <label for="issueDescription">Description</label>
+                <br>
+                <input type="text" name="issueDescription" id="issueDescription" placeholder="Description" />
+                <br>
+                <button type="submit" id="filterBtn" class="submitBtn">Filter</button>
+            </form>
+        </div> 
+        <div id="issueListDiv">
+            <h2>Issues</h2>
+        </div>   
+    </div>
+</div>

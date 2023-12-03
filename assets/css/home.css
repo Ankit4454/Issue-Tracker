@@ -1,0 +1,34 @@
+#projectList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.projectItem {
+    text-decoration: none;
+    color:black;
+}
+
+.projectItem{
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    margin: 1rem 1rem 1rem 0;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid royalblue;
+}
+
+.projectItem:hover {
+    background-color: royalblue;
+    color: white;
+}
+
+.projectDesc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

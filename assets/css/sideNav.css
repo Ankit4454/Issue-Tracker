@@ -1,0 +1,171 @@
+.navigation{
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+    width: 80px;
+    border-radius: 1rem;
+    border-left: 0.8rem solid royalblue;
+    background: royalblue;
+    transition: width 0.5s;
+    color: white;
+    padding: 1rem 0 0 0;
+    overflow-x: hidden;
+}
+
+.navigation.active{
+    width: 300px;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    padding: 0 0.2rem;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 1.5rem;
+    display: none;
+}
+
+.heading.active{
+    display: block;
+}
+
+.navigation ul{
+    position: relative;
+    width: 100%;
+    padding-top: 1.5rem;
+}
+
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.navigation ul li b:nth-child(1){
+    position: absolute;
+    top: -1rem;
+    height: 1rem;
+    width: 100%;
+    background: white;
+    display: none;
+}
+
+.navigation ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: royalblue;
+    border-bottom-right-radius: 1rem;
+}
+
+.navigation ul li b:nth-child(2){
+    position: absolute;
+    bottom: -1rem;
+    height: 1rem;
+    width: 100%;
+    background: white;
+    display: none;
+}
+
+.navigation ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: royalblue;
+    border-top-right-radius: 1rem;
+}
+
+.navigation ul li.active b:nth-child(1),
+.navigation ul li.active b:nth-child(2)
+{
+    display: block;
+}
+
+.navigation ul li.active{
+    background: white;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation ul li.active a{
+    color: black;
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 4rem;
+    height: 4rem;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon{
+    font-size: 1.5em;
+}
+
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 0.8rem;
+    height: 4rem;
+    line-height: 4rem;
+    white-space: normal;
+}
+
+.toggle{
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    height: 3.5rem;
+    width: 3.5rem;
+    background: royalblue;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.toggle.active{
+    background: royalblue;
+}
+
+.toggle ion-icon{
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    display: none;
+}
+
+.toggle ion-icon.open,
+.toggle.active ion-icon.close
+{
+    display: block;
+}
+
+.toggle ion-icon.close,
+.toggle.active ion-icon.open
+{
+    display: none;
+}
